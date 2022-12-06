@@ -6,14 +6,14 @@ import rozetka.runers.BaseTest;
 
 public class RozetkaTest extends BaseTest {
     @Test
-    public void registerNewUser() throws InterruptedException {
+    public void registrationWithValidData() throws InterruptedException {
         TestFacade.Interface signUp = new TestFacade().new Interface();
         TestFacade newUser = new TestFacade.Builder()
-                .fillName("1")
-                .fillSurname("1")
-                .fillPhone("111")
-                .fillEmail("111")
-                .fillPassword("1")
+                .fillName("Дмитро")
+                .fillSurname("Федоров")
+                .fillPhone("932348399")
+                .fillEmail("qa.testing.fedorov@gmail.com")
+                .fillPassword("789ecrEDG9")
                 .build();
         signUp.successfulTest();
     }

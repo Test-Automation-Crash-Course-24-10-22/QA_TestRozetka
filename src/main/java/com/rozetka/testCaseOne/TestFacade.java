@@ -84,7 +84,12 @@ public class TestFacade {
             testPage.fillPhone(phone);
             testPage.fillEmail(email);
             testPage.fillPassword(password);
-            testPage.confirmRegisterForm();
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            //testPage.confirmRegisterForm();
         }
     }
 
